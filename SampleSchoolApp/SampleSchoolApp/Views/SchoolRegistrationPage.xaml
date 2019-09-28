@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSchoolApp.Views.SchoolRegistrationPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,20,10,10" VerticalOptions="FillAndExpand" Spacing="5">
+                <Label Text="School Registration" TextColor="Blue" HorizontalOptions="CenterAndExpand" FontSize="30"/>
+                <StackLayout Spacing="15">
+                    
+                    <Label Text="School Name" FontSize="15"/>
+                    <Frame CornerRadius="5" Padding="8" BorderColor="#4ACC9C">
+                        <Entry  Text="{Binding SchoolName}" HeightRequest="40" HorizontalOptions="FillAndExpand"  TextColor="Gray" BackgroundColor="White"/>
+                    </Frame>
+
+                    <Label Text="Address" FontSize="15"/>
+                    <Frame CornerRadius="5" Padding="8" BorderColor="#4ACC9C">
+                        <Entry Text="{Binding Address}" HeightRequest="40" HorizontalOptions="FillAndExpand"  TextColor="Gray" BackgroundColor="White"/>
+                    </Frame>
+
+                    <Label Text="Medium" FontSize="15"/>
+                    <Frame CornerRadius="5" Padding="8" BorderColor="#4ACC9C">
+                        <Picker  x:Name="IndustryTypePicker1"  TextColor="Gray" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                           <Picker.Items>
+                                <x:String>English</x:String>
+                                <x:String>Labanese</x:String>
+                                <x:String>Arabic</x:String>
+                            </Picker.Items>
+                            <Picker.SelectedIndex>0</Picker.SelectedIndex>
+                        </Picker>
+                    </Frame>
+
+                    <Label Text="Phone Number" FontSize="15"/>
+                    <Frame CornerRadius="5" Padding="8" BorderColor="#4ACC9C">
+                        <Entry Text="{Binding PhoneNumber}" Keyboard="Telephone" HeightRequest="40" HorizontalOptions="FillAndExpand"  TextColor="Gray" BackgroundColor="White"/>
+                    </Frame>
+                    
+                    <Label Text="Email" FontSize="15"/>
+                    <Frame CornerRadius="5" Padding="8" BorderColor="#4ACC9C">
+                        <Entry Text="{Binding Email}" HeightRequest="40" Keyboard="Email" HorizontalOptions="FillAndExpand"  TextColor="Gray" BackgroundColor="White"/>
+                    </Frame>
+                    
+                    <Button Text="Register" HorizontalOptions="FillAndExpand" TextColor="white" Command="{Binding RegisterCommand}" HeightRequest="40"  BackgroundColor="#4ACC9C" CornerRadius="5"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

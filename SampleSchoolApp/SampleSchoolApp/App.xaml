@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSchoolApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color  x:Key="ToolBarBackground">#012F60</Color>
+            <Color x:Key="MenuTitleBarColor">#012F60</Color>
+            <Color x:Key="LoaderPopupBackground">#88000000</Color>
+            <Color x:Key="MenuItemBgColor">#012F60</Color>
+            <Color x:Key="ListViewHeaderDividerColor">#ffffff</Color>
+            <Color x:Key="TestSpecTitleColor">#e2e4e7</Color>
+            <Color x:Key="TitleBarColor">#012F60</Color>
+            <Color x:Key="ButtonBgColor">#4ACC9C</Color>
+            <Color x:Key="TitleTextColor">#ffffff</Color>
+            <Color x:Key="NormalTextColor">#000000</Color>
+            <Color x:Key="EntryBgColor">#f9f9f9</Color>
+            <Color x:Key="ListViewItemSeparatorColor">#ebebeb</Color>
+            <Color x:Key="TextGrayColor">#909497</Color>
+            <Color x:Key="LoginErrorBackgroundColor">#ce494a</Color>
+            <Color x:Key="ErrorHeaderTextColor">#c12f30</Color>
+           
+            <x:Double x:Key="TitlefontSize">26</x:Double>
+            <x:Double x:Key="SubTitlefontSize">22</x:Double>
+            <x:Double x:Key="NormalfontSize">18</x:Double>
+            <x:Double x:Key="SmallfontSize">12</x:Double>
+            <x:Double x:Key="ButtonTextFontSize">20</x:Double>
+
+
+            <Thickness x:Key="ButtonMargin" Left="10" Top="10" Right="10" Bottom="10" />
+            <Thickness x:Key="FunctionTitlePadding" Left="10" Top="10" Right="10" Bottom="10" />
+
+            <OnPlatform x:Key="Roboto_Normal" x:TypeArguments="x:String" iOS="Roboto" Android="Roboto-Regular.ttf#Roboto" />
+            <OnPlatform x:Key="Roboto_Medium" x:TypeArguments="x:String" iOS="Roboto-Medium" Android="Roboto-Medium.ttf#Roboto-Medium" />
+            <OnPlatform x:Key="Roboto_Bold" x:TypeArguments="x:String" iOS="Roboto-Bold" Android="Roboto-Bold.ttf#Roboto-Bold" />
+            <OnPlatform x:Key="ComicSansMS" x:TypeArguments="x:String" iOS="ComicSansMS" Android="ComicSansMS.ttf#ComicSansMS" />
+            <OnPlatform x:Key="Quicksand_Light" x:TypeArguments="x:String" iOS="Quicksand-Light" Android="Quicksand-Light.ttf#Roboto" />
+            <OnPlatform x:Key="Quicksand_Regular" x:TypeArguments="x:String" iOS="Quicksand-Regular" Android="Quicksand-Regular.ttf#Quicksand-Regular" />
+            <OnPlatform x:Key="Quicksand_Bold" x:TypeArguments="x:String" iOS="Quicksand-Bold" Android="Quicksand-Bold.ttf#Quicksand-Bold" />
+            <OnPlatform x:Key="Quicksand_Medium" x:TypeArguments="x:String" iOS="Quicksand-Medium" Android="Quicksand-Medium.ttf#Quicksand-Medium" />
+
+
+            
+          <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4ACC9C" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
+                <Setter Property="BorderColor" Value="{StaticResource ButtonBgColor}" />
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="{StaticResource ButtonMargin}" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="Font" Value="" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="{StaticResource Quicksand_Medium}" />
+                <Setter Property="FontSize" Value="{StaticResource SubTitlefontSize}" />
+            </Style>
+
+            <Style x:Key="HeaderLableStyle" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="TextColor" Value="{StaticResource TitleTextColor}" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="0, 0, 0, 0" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Font" Value="" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="{StaticResource Quicksand_Medium}" />
+                <Setter Property="FontSize" Value="{StaticResource TitlefontSize}" />
+            </Style>
+
+
+            <Style x:Key="NormalLableStyle" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0, 0, 0, 0" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="Font" Value="" />
+                <Setter Property="FontFamily" Value="{StaticResource Quicksand_Medium}" />
+                <Setter Property="FontSize" Value="{StaticResource NormalfontSize}" />
+            </Style>
+
+            <Style x:Key="MenuItemStyle" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HeightRequest" Value="30" />
+                <Setter Property="TextColor" Value="#012f60" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="20, 0, 0, 0" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="Font" Value="" />
+                <Setter Property="FontFamily" Value="{StaticResource Quicksand_Medium}" />
+                <Setter Property="FontSize" Value="{StaticResource NormalfontSize}" />
+            </Style>
+
+            <ControlTemplate x:Key="SubHeaderTemplate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Margin="15,10,0,0" Text="{TemplateBinding BindingContext.ModelNumber}" 
+                           FontSize="{StaticResource NormalfontSize}" FontFamily="{StaticResource Quicksand_Medium}"
+                           TextColor="{StaticResource NormalTextColor}" HorizontalOptions="Start" 
+                           VerticalOptions="Start" />
+                    <ContentPresenter Grid.Row="1" />
+                </Grid>
+            </ControlTemplate>
+
+        </ResourceDictionary>
+ </Application.Resources>
+</Application>

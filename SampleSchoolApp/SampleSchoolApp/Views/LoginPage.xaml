@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SampleSchoolApp.Views.LoginPage">
+    <ContentPage.Padding >
+        <OnPlatform x:TypeArguments ="Thickness"
+               iOS ="0, 20, 0, 0"
+               Android ="0, 0, 0, 0"/>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <ScrollView.Content>
+                <Grid HorizontalOptions="Fill" VerticalOptions="Fill" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0"  Grid.Row="0" Spacing="-6">
+                        <StackLayout.Resources>
+                            <ResourceDictionary>
+                                <Style TargetType="View" x:Key="MyBase">
+                                    <Style.Triggers>
+                                        <DataTrigger TargetType="View"  Value="True">
+                                            <Setter Property="Opacity" Value="0.3" />
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                                
+                                <Style TargetType="Label" BasedOn="{StaticResource MyBase}" />
+                                <Style TargetType="Entry" BasedOn="{StaticResource MyBase}" />
+                                <Style TargetType="Button" BasedOn="{StaticResource MyBase}" />
+                            </ResourceDictionary>
+                        </StackLayout.Resources>
+                        
+                        <StackLayout Orientation="Horizontal" Margin="0,30,0,0"  HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="{StaticResource LoginErrorBackgroundColor}" IsVisible="{Binding IsErrorMsgDisplay}" >
+                            <Image Source="error" HorizontalOptions="Center" VerticalOptions="Center" Margin="25,-5,0,0"></Image>
+                            <Label Text="{Binding Error}" TextColor="{StaticResource TitleTextColor}" Style="{StaticResource NormalLableStyle}" HorizontalOptions="Start" HorizontalTextAlignment="Start" HeightRequest="50" WidthRequest="200" ></Label>
+                        </StackLayout>
+                        
+                        <StackLayout VerticalOptions="FillAndExpand" Margin="0,-40,0,0">
+                            
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Image Source="user" MinimumWidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="30,80,10,0"></Image>
+                                <Entry x:Name="username"  Placeholder="UserName" Text="{Binding UserName}" FontFamily="{StaticResource Quicksand_Medium}"  HeightRequest="50" Margin="0,05,0,0" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="End">
+                                </Entry>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="password" MinimumWidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="30,10,10,0"></Image>
+                                <Entry x:Name="password" Placeholder="Password"  FontFamily="{StaticResource Quicksand_Medium}" IsPassword="True" Text="{Binding Password}" HeightRequest="50" Margin="0,05,0,0" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="End"/>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Start"  HeightRequest="50" >
+                                <Switch x:Name="rememberSwitch"  HorizontalOptions="Start"  VerticalOptions="Center" Margin="30,0,0,0"  />
+                                <Label Text="Remember me"  FontFamily="{StaticResource Quicksand_Medium}" HorizontalOptions="Center"  VerticalOptions="Center"   />
+                            </StackLayout>
+
+                            <Button CornerRadius="10" x:Name="btnLogin" Text="Login" Style="{StaticResource ButtonStyle}" Command="{Binding LoginCommand}"  WidthRequest="290" FontFamily="{StaticResource Roboto_Normal}"  
+                                    HorizontalOptions="Center" VerticalOptions="Start" Margin="10,10,10,0"  FontSize="{StaticResource ButtonTextFontSize}"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView.Content>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
