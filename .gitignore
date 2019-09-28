@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/SampleSchoolApp/v15
+/SampleSchoolApp/SampleSchoolApp.Android/bin/Debug
+/SampleSchoolApp/SampleSchoolApp/obj/Debug/netstandard2.0/Views
+/SampleSchoolApp/SampleSchoolApp.iOS/bin/iPhoneSimulator/Debug
+/SampleSchoolApp/SampleSchoolApp.iOS/obj/iPhoneSimulator/Debug
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81/android/assets
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81/linksrc
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81/lp/1/jl
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81/lp/12/jl/aidl/android/support/v4/os
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81/lp/12/jl/manifest
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81/designtime
+/SampleSchoolApp/SampleSchoolApp.Android/obj/Debug/81
