@@ -8,6 +8,6 @@ namespace SampleSchoolApp.Services
     public interface ISchoolService
     {
         IEnumerable GetSchools();
-        void ValidateSchoolInfo()
+       
     }
 }
